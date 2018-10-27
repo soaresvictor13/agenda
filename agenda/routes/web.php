@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['name' => 'Teste']);
+});
+
+Route::get('/child', function () {
+    return view('child');
 });
