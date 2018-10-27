@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Horario extends Model
 {
    protected $fillable = [
-       'data', 'hora', 'qtd_clientes'
+       'dia', 'horario', 'qtd_clientes'
    ];
+
+   protected $casts = [
+      'dia' => 'date:Y-m-d',
+      'horario' => 'time:H:00',
+  ];
 }

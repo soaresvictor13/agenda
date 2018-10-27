@@ -17,6 +17,8 @@ Route::get('/', function () {
 });
 
 Route::get('/horarios', 'HorarioController@index');
+Route::get('/horarios/{id}', 'HorarioController@show');
+Route::post('/horarios', 'HorarioController@store');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
